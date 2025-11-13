@@ -11,40 +11,11 @@ import { type ButtonProps } from '@bexio/react-wrappers/button';
 //   disabled?: boolean;
 //   children?: React.ReactNode;
 // } & React.ButtonHTMLAttributes<HTMLButtonElement>;
+ 
 
-interface customButtonProps extends React.PropsWithChildren<'button'> {
-  variant?: ButtonVariant;
-  size?: ButtonSize;
-  disabled?: boolean;
-  loading?: boolean;
-  type?: ButtonType;
-  href?: string;
-  rel?: string;
-  target?: string;
-  download?: string;
-
-  onClick?: (event: MouseEvent) => void;
-  onFocus?: (event: FocusEvent) => void;
-  onBlur?: (event: FocusEvent) => void;
-  onKeyDown?: React.KeyboardEventHandler<HTMLElement>;
-  
-
-  role?: string | null;
-  // 'aria-label'?: string;
-  // 'aria-labelledby'?: string;
-  // 'aria-describedby'?: string;
-  // 'aria-disabled'?: 'true' | 'false';
- };
-
- export interface Button2Props extends React.ComponentPropsWithoutRef<'button'>,  customButtonProps {
-    handleClick?: () => void;
-    className?: string;
-    children?: React.ReactNode;
-    style?: React.CSSProperties;
-    tabIndex?: number;
-}
-
-const InnerButton = (props: Button2Props) => {
+const InnerButton: React.FC<ButtonProps>  = (props: ButtonProps & {
+  handleClick?: () => void;
+}) => {
   const [BxButton, setBxButton] = React.useState<any>(null);
 
   React.useEffect(() => {
