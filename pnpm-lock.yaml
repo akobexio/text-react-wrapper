@@ -1,22 +1,34 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@bexio/design-tokens': ^0.7.0
+  '@bexio/react-wrappers': 0.0.1-export-button-49-with-fontawesome
+  '@fortawesome/fontawesome-free': ^6.4.0
+  '@fortawesome/fontawesome-pro': ^6.4.0
+  '@fortawesome/fontawesome-svg-core': ^6.2.1
   '@tailwindcss/postcss': ^4
   '@types/node': ^20
   '@types/react': ^19
   '@types/react-dom': ^19
   eslint: ^9
   eslint-config-next: 16.0.0
+  lit: 3.1.2
   next: 16.0.0
-  react: 19.2.0
-  react-dom: 19.2.0
+  react: 18.2.0
+  react-dom: 18.2.0
   tailwindcss: ^4
-  typescript: ^5
+  typescript: ^5.9.3
 
 dependencies:
-  next: 16.0.0_lh6yjnbmlemn4t264xkzt2k63q
-  react: 19.2.0
-  react-dom: 19.2.0_react@19.2.0
+  '@bexio/design-tokens': 0.7.0
+  '@bexio/react-wrappers': 0.0.1-export-button-49-with-fontawesome_b6in3clwayvotghsteu4t4vsf4
+  '@fortawesome/fontawesome-free': 6.7.2
+  '@fortawesome/fontawesome-pro': 6.7.2
+  '@fortawesome/fontawesome-svg-core': 6.7.2
+  lit: 3.1.2
+  next: 16.0.0_biqbaboplfbrettd7655fr4n2y
+  react: 18.2.0
+  react-dom: 18.2.0_react@18.2.0
 
 devDependencies:
   '@tailwindcss/postcss': 4.1.16
@@ -186,6 +198,34 @@ packages:
       '@babel/helper-validator-identifier': 7.27.1
     dev: true
 
+  /@bexio/components/0.0.1-export-button-48-with-fontawesome_3wq4tqscaufhyiunzbzupka63u:
+    resolution: {integrity: sha512-+aD0kicNsCAB/36E6FQgedYR77YY+uA6X2DIU4AelVkNx/o+ixX45bydSne0ic8OE2FCHYuV70m4xpNPhEGxsA==}
+    peerDependencies:
+      '@bexio/design-tokens': 0.7.0
+      lit: ^3.1.2
+    dependencies:
+      '@bexio/design-tokens': 0.7.0
+      lit: 3.1.2
+    dev: false
+
+  /@bexio/design-tokens/0.7.0:
+    resolution: {integrity: sha512-a0avosSmd5D07WI2PByRhNfXU4dSNIe9MyVL92Um0Qtl1NBJ8lXrqAQKha25ybei7LNIvNBhHeGLREHt3FkFNg==}
+    dev: false
+
+  /@bexio/react-wrappers/0.0.1-export-button-49-with-fontawesome_b6in3clwayvotghsteu4t4vsf4:
+    resolution: {integrity: sha512-4j0mKHwDnuX+GNBCE+eFAuaE6mGvVAP8S9fq6j6PvfMwycMRknNDCo4Zu9P4iGfYbWkhreLELKCw95dp4AHE1g==}
+    peerDependencies:
+      react: ^18.0.0
+      react-dom: ^18.0.0
+    dependencies:
+      '@bexio/components': 0.0.1-export-button-48-with-fontawesome_3wq4tqscaufhyiunzbzupka63u
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    transitivePeerDependencies:
+      - '@bexio/design-tokens'
+      - lit
+    dev: false
+
   /@emnapi/core/1.6.0:
     resolution: {integrity: sha512-zq/ay+9fNIJJtJiZxdTnXS20PllcYMX3OE23ESc4HK/bdYu3cOWYVhsOhVnXALfU/uqJIxn5NBPd9z4v+SfoSg==}
     requiresBuild: true
@@ -284,6 +324,28 @@ packages:
       '@eslint/core': 0.16.0
       levn: 0.4.1
     dev: true
+
+  /@fortawesome/fontawesome-common-types/6.7.2:
+    resolution: {integrity: sha512-Zs+YeHUC5fkt7Mg1l6XTniei3k4bwG/yo3iFUtZWd/pMx9g3fdvkSK9E0FOC+++phXOka78uJcYb8JaFkW52Xg==}
+    engines: {node: '>=6'}
+    dev: false
+
+  /@fortawesome/fontawesome-free/6.7.2:
+    resolution: {integrity: sha512-JUOtgFW6k9u4Y+xeIaEiLr3+cjoUPiAuLXoyKOJSia6Duzb7pq+A76P9ZdPDoAoxHdHzq6gE9/jKBGXlZT8FbA==}
+    engines: {node: '>=6'}
+    dev: false
+
+  /@fortawesome/fontawesome-pro/6.7.2:
+    resolution: {integrity: sha512-5ZocZMRSZ0ECojDoRMJji6jHTq4ymc4LaaKrYCY55Lir2GxFRBrsm27r2sKQWjIkaVYZ3tbgjMeXb3aFbSo0Vw==}
+    engines: {node: '>=6'}
+    dev: false
+
+  /@fortawesome/fontawesome-svg-core/6.7.2:
+    resolution: {integrity: sha512-yxtOBWDrdi5DD5o1pmVdq3WMCvnobT0LU6R8RyyVXPvFRd2o79/0NCuQoCjNTeZz9EzA9xS3JxNWfv54RIHFEA==}
+    engines: {node: '>=6'}
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.7.2
+    dev: false
 
   /@humanfs/core/0.19.1:
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -551,6 +613,16 @@ packages:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
     dev: true
+
+  /@lit-labs/ssr-dom-shim/1.4.0:
+    resolution: {integrity: sha512-ficsEARKnmmW5njugNYKipTm4SFnbik7CXtoencDZzmzo/dQ+2Q0bgkzJuoJP20Aj0F+izzJjOqsnkd6F/o1bw==}
+    dev: false
+
+  /@lit/reactive-element/2.1.1:
+    resolution: {integrity: sha512-N+dm5PAYdQ8e6UlywyyrgI2t++wFGXfHx+dSJ1oBrg6FAxUj40jId++EaRm80MKX5JnlH1sBsyZ5h0bcZKemCg==}
+    dependencies:
+      '@lit-labs/ssr-dom-shim': 1.4.0
+    dev: false
 
   /@napi-rs/wasm-runtime/0.2.12:
     resolution: {integrity: sha512-ZVWUcfwY4E/yPitQJl481FjFo3K22D6qF0DuFH6Y/nbnE11GY5uguDxZMGXPQ8WQ0128MXQD7TnfHyK4oWoIJQ==}
@@ -873,6 +945,10 @@ packages:
     dependencies:
       csstype: 3.1.3
     dev: true
+
+  /@types/trusted-types/2.0.7:
+    resolution: {integrity: sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw==}
+    dev: false
 
   /@typescript-eslint/eslint-plugin/8.46.2_zpqyrvzrlarrn7tokchvlpm3fi:
     resolution: {integrity: sha512-ZGBMToy857/NIPaaCucIUQgqueOiq7HeAKkhlvqVV4lm089zUFW6ikRySx2v+cAhKeUCPuWVHeimyk6Dw1iY3w==}
@@ -2493,7 +2569,6 @@ packages:
 
   /js-tokens/4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
-    dev: true
 
   /js-yaml/4.1.0:
     resolution: {integrity: sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==}
@@ -2686,6 +2761,28 @@ packages:
       lightningcss-win32-x64-msvc: 1.30.2
     dev: true
 
+  /lit-element/4.2.1:
+    resolution: {integrity: sha512-WGAWRGzirAgyphK2urmYOV72tlvnxw7YfyLDgQ+OZnM9vQQBQnumQ7jUJe6unEzwGU3ahFOjuz1iz1jjrpCPuw==}
+    dependencies:
+      '@lit-labs/ssr-dom-shim': 1.4.0
+      '@lit/reactive-element': 2.1.1
+      lit-html: 3.3.1
+    dev: false
+
+  /lit-html/3.3.1:
+    resolution: {integrity: sha512-S9hbyDu/vs1qNrithiNyeyv64c9yqiW9l+DBgI18fL+MTvOtWoFR0FWiyq1TxaYef5wNlpEmzlXoBlZEO+WjoA==}
+    dependencies:
+      '@types/trusted-types': 2.0.7
+    dev: false
+
+  /lit/3.1.2:
+    resolution: {integrity: sha512-VZx5iAyMtX7CV4K8iTLdCkMaYZ7ipjJZ0JcSdJ0zIdGxxyurjIn7yuuSxNBD7QmjvcNJwr0JS4cAdAtsy7gZ6w==}
+    dependencies:
+      '@lit/reactive-element': 2.1.1
+      lit-element: 4.2.1
+      lit-html: 3.3.1
+    dev: false
+
   /locate-path/6.0.0:
     resolution: {integrity: sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==}
     engines: {node: '>=10'}
@@ -2702,7 +2799,6 @@ packages:
     hasBin: true
     dependencies:
       js-tokens: 4.0.0
-    dev: true
 
   /lru-cache/5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
@@ -2770,7 +2866,7 @@ packages:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
 
-  /next/16.0.0_lh6yjnbmlemn4t264xkzt2k63q:
+  /next/16.0.0_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-nYohiNdxGu4OmBzggxy9rczmjIGI+TpR5vbKTsE1HqYwNm1B+YSiugSrFguX6omMOKnDHAmBPY4+8TNJk0Idyg==}
     engines: {node: '>=20.9.0'}
     hasBin: true
@@ -2795,9 +2891,9 @@ packages:
       '@swc/helpers': 0.5.15
       caniuse-lite: 1.0.30001751
       postcss: 8.4.31
-      react: 19.2.0
-      react-dom: 19.2.0_react@19.2.0
-      styled-jsx: 5.1.6_react@19.2.0
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      styled-jsx: 5.1.6_react@18.2.0
     optionalDependencies:
       '@next/swc-darwin-arm64': 16.0.0
       '@next/swc-darwin-x64': 16.0.0
@@ -2997,22 +3093,25 @@ packages:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
     dev: true
 
-  /react-dom/19.2.0_react@19.2.0:
-    resolution: {integrity: sha512-UlbRu4cAiGaIewkPyiRGJk0imDN2T3JjieT6spoL2UeSf5od4n5LB/mQ4ejmxhCFT1tYe8IvaFulzynWovsEFQ==}
+  /react-dom/18.2.0_react@18.2.0:
+    resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==}
     peerDependencies:
-      react: ^19.2.0
+      react: ^18.2.0
     dependencies:
-      react: 19.2.0
-      scheduler: 0.27.0
+      loose-envify: 1.4.0
+      react: 18.2.0
+      scheduler: 0.23.2
     dev: false
 
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: true
 
-  /react/19.2.0:
-    resolution: {integrity: sha512-tmbWg6W31tQLeB5cdIBOicJDJRR2KzXsV7uSK9iNfLWQ5bIZfxuPEHp7M8wiHyHnn0DD1i7w3Zmin0FtkrwoCQ==}
+  /react/18.2.0:
+    resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
     engines: {node: '>=0.10.0'}
+    dependencies:
+      loose-envify: 1.4.0
     dev: false
 
   /reflect.getprototypeof/1.0.10:
@@ -3108,8 +3207,10 @@ packages:
       is-regex: 1.2.1
     dev: true
 
-  /scheduler/0.27.0:
-    resolution: {integrity: sha512-eNv+WrVbKu1f3vbYJT/xtiF5syA5HPIMtf9IgY/nKg0sWqzAUEvqY/xm7OcZc/qafLx/iO9FgOmeSAp4v5ti/Q==}
+  /scheduler/0.23.2:
+    resolution: {integrity: sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ==}
+    dependencies:
+      loose-envify: 1.4.0
     dev: false
 
   /semver/6.3.1:
@@ -3332,7 +3433,7 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /styled-jsx/5.1.6_react@19.2.0:
+  /styled-jsx/5.1.6_react@18.2.0:
     resolution: {integrity: sha512-qSVyDTeMotdvQYoHWLNGwRFJHC+i+ZvdBRYosOFgC+Wg1vx4frN2/RG/NA7SYqqvKNLf39P2LSRA2pu6n0XYZA==}
     engines: {node: '>= 12.0.0'}
     peerDependencies:
@@ -3346,7 +3447,7 @@ packages:
         optional: true
     dependencies:
       client-only: 0.0.1
-      react: 19.2.0
+      react: 18.2.0
     dev: false
 
   /supports-color/7.2.0:
