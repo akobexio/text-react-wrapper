@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import Button from "./components/Button/Button";
 
@@ -42,7 +43,8 @@ export default function Home() {
             className="whitespace-nowrap"
             data-testid={"add-client-button"}
             variant={"primary"}
-            loading={true}
+            handleClick={() => {console.log('ayooo')}}
+            onClick={(e) => {console.log('on click', e)}}
           >
             <i className="fa-solid fa-house"></i>
             asdf movie
@@ -51,9 +53,10 @@ export default function Home() {
           <Button
             className="whitespace-nowrap"
             variant={"secondary"}
-            loading={true}
+            onClick={(e) => {console.log('on click', e.target)}}
+
           >
-            asdf movie
+           This one is on click
           </Button>
 
           <Button

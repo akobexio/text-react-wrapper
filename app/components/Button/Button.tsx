@@ -1,44 +1,55 @@
-'use client';
+"use client";
 
-import React from 'react';
+import React, {useRef} from 'react';
 import dynamic from 'next/dynamic';
-import styles from './Button.module.scss';
-import { type ButtonProps } from '@bexio/react-wrappers/button';
 
-// type ButtonProps1: ButtonProps = {
-//   handleClick?: () => void;
-//   variant?: 'primary' | 'secondary' | 'danger' | 'link';
-//   disabled?: boolean;
-//   children?: React.ReactNode;
-// } & React.ButtonHTMLAttributes<HTMLButtonElement>;
- 
+import { ButtonProps } from '@bexio/react-wrappers';
 
-const InnerButton: React.FC<ButtonProps>  = (props: ButtonProps & {
-  handleClick?: () => void;
+/**
+ * Todo: 
+ * - Remove lit as dependency 
+ * - add support for 'slot' to FontAwesome icons 
+ * - fix "double" form submit 
+ * */
+
+const InnerButton = (props: ButtonProps & {
+  handleClick?: React.MouseEventHandler;
+  form?: string;
 }) => {
+  const ref = useRef<HTMLElement>(null);
   const [BxButton, setBxButton] = React.useState<any>(null);
+  const { handleClick, onClick,  ...rest } = props;
 
   React.useEffect(() => {
-    // Import only on client side
-    import('@bexio/react-wrappers/button').then((mod) => {
+    // Imports only on client side, no ssr
+    import('@bexio/react-wrappers/lib/button').then((mod) => {
       setBxButton(() => mod.Button);
     });
   }, []);
 
-  if (!BxButton) return null; // or loading spinner
+  if (!BxButton) return null;
 
   return (
     <BxButton
-      icon="gear"
-      onClick={props.handleClick}
-      disabled={props.disabled}
-      variant={props.variant || 'primary'}
-      {...props}
+      ref={ref} 
+      class={rest.className}
+      onClick={handleClick ?? onClick}
+    
+      {...(rest.variant ? { variant: rest.variant } : {})}
+      {...(rest.size ? { size: rest.size } : {})}
+      {...(rest.disabled ? { disabled: rest.disabled } : {})}
+      {...(rest.loading ? { loading: rest.loading } : {})}
+      {...(rest.type ? { type: rest.type } : {})}
+      {...(rest.form ? { form: rest.form } : {})}
+      {...rest}
     >
-      {props.children}
+    {props.children}
     </BxButton>
   );
 };
 
-const Button = dynamic(async () => Promise.resolve(InnerButton), { ssr: false });
-export default Button;
+const BxButton = dynamic(async () => Promise.resolve(InnerButton), {
+  ssr: false
+});
+
+export default BxButton;

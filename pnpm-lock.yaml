@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@bexio/components': 0.0.1-export-button-50-with-fontawesome
   '@bexio/design-tokens': ^0.7.0
   '@bexio/react-wrappers': 0.0.1-export-button-50-with-fontawesome
   '@fortawesome/fontawesome-free': ^6.4.0
@@ -20,6 +21,7 @@ specifiers:
   typescript: ^5.9.3
 
 dependencies:
+  '@bexio/components': 0.0.1-export-button-50-with-fontawesome_3wq4tqscaufhyiunzbzupka63u
   '@bexio/design-tokens': 0.7.0
   '@bexio/react-wrappers': 0.0.1-export-button-50-with-fontawesome_b6in3clwayvotghsteu4t4vsf4
   '@fortawesome/fontawesome-free': 6.7.2
@@ -200,6 +202,16 @@ packages:
 
   /@bexio/components/0.0.1-export-button-48-with-fontawesome_3wq4tqscaufhyiunzbzupka63u:
     resolution: {integrity: sha512-+aD0kicNsCAB/36E6FQgedYR77YY+uA6X2DIU4AelVkNx/o+ixX45bydSne0ic8OE2FCHYuV70m4xpNPhEGxsA==}
+    peerDependencies:
+      '@bexio/design-tokens': 0.7.0
+      lit: ^3.1.2
+    dependencies:
+      '@bexio/design-tokens': 0.7.0
+      lit: 3.1.2
+    dev: false
+
+  /@bexio/components/0.0.1-export-button-50-with-fontawesome_3wq4tqscaufhyiunzbzupka63u:
+    resolution: {integrity: sha512-EZhV2gBWexVG+z7MkvhxZESXryVCuthkO3RXeJ4LHhUTOwgacI+JdXI+QbkB3X8EQKyiTvi9VpXEWeBiZK7cIg==}
     peerDependencies:
       '@bexio/design-tokens': 0.7.0
       lit: ^3.1.2
