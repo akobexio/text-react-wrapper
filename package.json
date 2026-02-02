@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "@bexio/design-tokens": "0.7.0",
-    "@bexio/components": "0.0.1-export-react-btn-7",
-    "@bexio/react-wrappers": "0.0.1-export-react-btn-7",    
+    "@bexio/components": "0.0.1-export-button-97-with-fontawesome",
+    "@bexio/react-wrappers": "0.0.1-export-button-97-with-fontawesome",    
     "lit": "3.1.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
