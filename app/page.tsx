@@ -1,12 +1,13 @@
 "use client"
 import Image from "next/image";
-import Button from "./components/Button/Button";
+import Button from "./components/BxButton/BxButton";
+import BxButton from "./components/BxButton/BxButton";
 
 export default function Home() {
   //  todo: as dependency "lit": "3.1.2",
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+    <div className="flex min-h-screen items-center justify-center font-sans dark:bg-black">
+      <main className="flex container mx-auto border-1 my-4 p-4 min-h-screen w-full max-w-4xl flex-row items-center justify-between py-32 px-16 sm:items-start">
         <Image
           className="dark:invert"
           src="/next.svg"
@@ -39,45 +40,43 @@ export default function Home() {
         </div>
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row"
          style={{display: "flex", alignItems: "center", gap: "16px"}}>
-          <Button
+          <BxButton
+            icon="house"
             className="whitespace-nowrap"
             data-testid={"add-client-button"}
             variant={"primary"}
             handleClick={() => {console.log('ayooo')}}
             onClick={(e) => {console.log('on click', e)}}
           >
-            <i className="fa-solid fa-house"></i>
             asdf movie
-          </Button>
+          </BxButton>
 
-          <Button
-            className="whitespace-nowrap"
-            variant={"secondary"}
-            onClick={(e) => {console.log('on click', e.target)}}
+         <BxButton 
+          className="whitespace-nowrap" 
+           data-testid={'add-client-button'}>
+          Add Client 
+          </BxButton>
 
-          >
-           This one is on click
-          </Button>
-
-          <Button
+          <BxButton
             className="whitespace-nowrap"
             variant={"tertiary"}
             size={'sm'}
             disabled={true}
           >
             small
-          </Button>
+          </BxButton>
 
-        <Button
+
+        <BxButton
             className="whitespace-nowrap"
             variant={"danger"}
             size={'lg'}
             
           >
             big
-          </Button>
+          </BxButton>
 
-          <Button
+          <BxButton
             className="whitespace-nowrap"
             variant={"danger"}
             size={'sm'}
@@ -86,14 +85,15 @@ export default function Home() {
             
           >
             form reset
-          </Button>
+          </BxButton>
 
-            <Button 
+            <BxButton 
+            icon="book"
              href={"https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"}
               target="_blank"
               rel="noopener noreferrer">
                 Documentation
-            </Button>
+            </BxButton>
           <a
             className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
@@ -102,6 +102,19 @@ export default function Home() {
           >
             Documentation
           </a>
+        </div>
+
+
+        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+          <BxButton variant="primary" size={'sm'}>Primary</BxButton>
+          <BxButton variant="secondary" size={'md'}>Secondary</BxButton>
+          <BxButton variant="tertiary" size={'lg'}>Tertiary</BxButton>
+          <BxButton variant="danger" size={'md'} loading='true'>Danger</BxButton>
+          <BxButton 
+          variant="secondary" 
+          icon={'plus'}>
+            Add Employee
+         </BxButton>
         </div>
       </main>
     </div>
