@@ -1,55 +1,56 @@
 "use client";
 
-import React, {useRef} from 'react';
+import React, { forwardRef, useRef } from 'react';
 import dynamic from 'next/dynamic';
-
 import { ButtonProps } from '@bexio/react-wrappers';
 
-/**
- * Todo: 
- * - Remove lit as dependency 
- * - add support for 'slot' to FontAwesome icons 
- * - fix "double" form submit 
- * */
-
-const InnerButton = (props: ButtonProps & {
-  handleClick?: React.MouseEventHandler;
+// 1. Define the props interface (if not already done)
+interface BxButtonProps extends ButtonProps {
+  // Add any specific props your wrapper component needs
+  handleClick?: React.MouseEventHandler<HTMLElement>;
   form?: string;
-}) => {
-  const ref = useRef<HTMLElement>(null);
-  const [BxButton, setBxButton] = React.useState<any>(null);
-  const { handleClick, onClick,  ...rest } = props;
+  className?: string;
+  children?: React.ReactNode;
+}
 
-  React.useEffect(() => {
-    // Imports only on client side, no ssr
-    import('@bexio/react-wrappers/lib/button').then((mod) => {
-      setBxButton(() => mod.Button);
-    });
-  }, []);
+// 2. Dynamically import the Lit-wrapped Button component
+// The 'Button' is loaded from the @bexio/react-wrappers package.
+const DynamicBxButton = dynamic(
+  () => import('@bexio/react-wrappers/button').then((mod) => mod.Button),
+  {
+    ssr: false, // CRITICAL: Ensures no SSR occurs for this component
+    loading: () => <button disabled>Loading...</button>, // Optional loading state
+  }
+);
 
-  if (!BxButton) return null;
-
-  return (
-    <BxButton
-      ref={ref} 
-      class={rest.className}
-      onClick={handleClick ?? onClick}
+// 3. Create the main wrapper component using forwardRef
+const BxButton = forwardRef<HTMLElement, BxButtonProps>(
+  (props, ref) => {
+    const { handleClick, onClick, children, className, ...rest } = props;
     
-      {...(rest.variant ? { variant: rest.variant } : {})}
-      {...(rest.size ? { size: rest.size } : {})}
-      {...(rest.disabled ? { disabled: rest.disabled } : {})}
-      {...(rest.loading ? { loading: rest.loading } : {})}
-      {...(rest.type ? { type: rest.type } : {})}
-      {...(rest.form ? { form: rest.form } : {})}
-      {...rest}
-    >
-    {props.children}
-    </BxButton>
-  );
-};
+    // Combine the custom handleClick with the standard onClick prop
+    const combinedClickHandler = handleClick ?? onClick;
 
-const BxButton = dynamic(async () => Promise.resolve(InnerButton), {
-  ssr: false
-});
+    // We use DynamicBxButton, which is now a clean, deferred React component.
+    return (
+      <DynamicBxButton
+        ref={ref} 
+        // Use 'className' prop directly for clean CSS application
+        className={className} 
+        
+        // Pass the combined handler
+        onClick={combinedClickHandler}
+        
+        // Spread all remaining props automatically
+        {...rest}
+      >
+        {children}
+      </DynamicBxButton>
+    );
+  }
+);
+
+// Assign a display name for easier debugging
+BxButton.displayName = 'BxButton';
 
 export default BxButton;
