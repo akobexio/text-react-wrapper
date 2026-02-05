@@ -9,14 +9,14 @@ importers:
   .:
     dependencies:
       '@bexio/components':
-        specifier: 0.0.1-export-button-97-with-fontawesome
-        version: 0.0.1-export-button-97-with-fontawesome(@bexio/design-tokens@0.7.0)(lit@3.1.2)
+        specifier: 0.9.0-alpha.2
+        version: 0.9.0-alpha.2(@bexio/design-tokens@0.9.0)(lit@3.1.2)
       '@bexio/design-tokens':
-        specifier: 0.7.0
-        version: 0.7.0
+        specifier: 0.9.0
+        version: 0.9.0
       '@bexio/react-wrappers':
-        specifier: 0.0.1-export-button-97-with-fontawesome
-        version: 0.0.1-export-button-97-with-fontawesome(@bexio/design-tokens@0.7.0)(lit@3.1.2)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        specifier: 0.9.0-alpha.2
+        version: 0.9.0-alpha.2(@bexio/design-tokens@0.9.0)(lit@3.1.2)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@fortawesome/fontawesome-free':
         specifier: ^6.4.0
         version: 6.7.2
@@ -137,17 +137,17 @@ packages:
     resolution: {integrity: sha512-LwdZHpScM4Qz8Xw2iKSzS+cfglZzJGvofQICy7W7v4caru4EaAmyUuO6BGrbyQ2mYV11W0U8j5mBhd14dd3B0A==}
     engines: {node: '>=6.9.0'}
 
-  '@bexio/components@0.0.1-export-button-97-with-fontawesome':
-    resolution: {integrity: sha512-4oKtly543cV0cNNPCANohsV6dSuCvRJdHxdNZdhdjqh0LhYk9EFJEY61j5Zv6M9p4gy7S7resgJ00seSffdGEA==}
+  '@bexio/components@0.9.0-alpha.2':
+    resolution: {integrity: sha512-2bDKi3jSSVHcMeO8Z21dvGuXBECpnde2HQmOQH8qdD5q29QcdcVQVM9ZI6Qf8HR0Pbbz2WNUjIaSs3r55ES/+A==}
     peerDependencies:
       '@bexio/design-tokens': 0.7.0
       lit: ^3.1.2
 
-  '@bexio/design-tokens@0.7.0':
-    resolution: {integrity: sha512-a0avosSmd5D07WI2PByRhNfXU4dSNIe9MyVL92Um0Qtl1NBJ8lXrqAQKha25ybei7LNIvNBhHeGLREHt3FkFNg==}
+  '@bexio/design-tokens@0.9.0':
+    resolution: {integrity: sha512-1P+7JCFlYhZ2Xk6/x9T0fKDWDlMc9e6Vkm2fAMRtrK/8fMdj20v4xPNgtm+ZUsb8WYIy8cL5T/uWMzGJuWgMrg==}
 
-  '@bexio/react-wrappers@0.0.1-export-button-97-with-fontawesome':
-    resolution: {integrity: sha512-9LYKVJ8db1JLrzHUP9CBJO7sdIzgGEO4IfiCdDYFMOeTwyfgFuhyFzMVxVGUC0jBmxNr226VmH+M6cCYq7FUFg==}
+  '@bexio/react-wrappers@0.9.0-alpha.2':
+    resolution: {integrity: sha512-PJodA6EGXvituwpenfxwQdkYfHmv3F7XQVCQzuQv7HOQ+b1tyt1G6Ap8+93Z1SREYD9EODqzAmJBLp3xejdjvA==}
     peerDependencies:
       react: ^18.0.0
       react-dom: ^18.0.0
@@ -2079,16 +2079,16 @@ snapshots:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.28.5
 
-  '@bexio/components@0.0.1-export-button-97-with-fontawesome(@bexio/design-tokens@0.7.0)(lit@3.1.2)':
+  '@bexio/components@0.9.0-alpha.2(@bexio/design-tokens@0.9.0)(lit@3.1.2)':
     dependencies:
-      '@bexio/design-tokens': 0.7.0
+      '@bexio/design-tokens': 0.9.0
       lit: 3.1.2
 
-  '@bexio/design-tokens@0.7.0': {}
+  '@bexio/design-tokens@0.9.0': {}
 
-  '@bexio/react-wrappers@0.0.1-export-button-97-with-fontawesome(@bexio/design-tokens@0.7.0)(lit@3.1.2)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+  '@bexio/react-wrappers@0.9.0-alpha.2(@bexio/design-tokens@0.9.0)(lit@3.1.2)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
-      '@bexio/components': 0.0.1-export-button-97-with-fontawesome(@bexio/design-tokens@0.7.0)(lit@3.1.2)
+      '@bexio/components': 0.9.0-alpha.2(@bexio/design-tokens@0.9.0)(lit@3.1.2)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     transitivePeerDependencies:
