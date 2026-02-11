@@ -9,9 +9,9 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@bexio/design-tokens": "0.9.0",
-    "@bexio/components": "0.9.0-alpha.2",
-    "@bexio/react-wrappers": "0.9.0-alpha.2",    
+    "@bexio/design-tokens": "0.10.0",
+    "@bexio/components": "0.10.1-executable-wc-2",
+    "@bexio/react-wrappers": "0.10.3",    
     "lit": "3.1.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
