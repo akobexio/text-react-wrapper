@@ -1,13 +1,13 @@
 "use client"
 import Image from "next/image";
-import Button from "./components/BxButton/BxButton";
 import BxButton from "./components/BxButton/BxButton";
+import TestForm from "./components/testForm/testForm";
 
 export default function Home() {
-  //  todo: as dependency "lit": "3.1.2",
   return (
     <div className="flex min-h-screen items-center justify-center font-sans dark:bg-black">
       <main className="flex container mx-auto border-1 my-4 p-4 min-h-screen w-full max-w-4xl flex-row items-center justify-between py-32 px-16 sm:items-start">
+        <TestForm /> 
         <Image
           className="dark:invert"
           src="/next.svg"

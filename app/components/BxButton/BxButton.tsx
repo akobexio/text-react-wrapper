@@ -1,9 +1,10 @@
-"use client"
+/* eslint-disable @typescript-eslint/no-explicit-any */
+"use client";
 
 import React, {useRef} from 'react';
 import dynamic from 'next/dynamic';
 
-import { ButtonProps } from '@bexio/react-wrappers';
+import { ButtonProps } from '@bexio/react-wrappers/button';
 
  
 
@@ -28,8 +29,12 @@ const InnerButton = (props: ButtonProps & {
     <BxButton
       ref={ref} 
       class={rest.className}
-      onClick={handleClick ?? onClick}
-    
+      onClick={(e) => {
+        // eslint-disable-next-line no-console
+        console.log('Button clicked', e);
+        handleClick ? handleClick(e) : onClick?.(e);
+      }}
+      {...(rest.form ? { form: rest.form } : {})}
       {...(rest.variant ? { variant: rest.variant } : {})}
       {...(rest.size ? { size: rest.size } : {})}
       {...(rest.disabled ? { disabled: rest.disabled } : {})}
@@ -38,7 +43,7 @@ const InnerButton = (props: ButtonProps & {
       {...(rest.form ? { form: rest.form } : {})}
       {...rest}
     >
-    {props.children}
+   {rest.form} {props.children}
     </BxButton>
   );
 };
