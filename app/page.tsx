@@ -41,12 +41,13 @@ export default function Home() {
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row"
          style={{display: "flex", alignItems: "center", gap: "16px"}}>
           <BxButton
-            icon="house"
+            icon="plus"
             className="whitespace-nowrap"
             data-testid={"add-client-button"}
             variant={"primary"}
             handleClick={() => {console.log('ayooo')}}
             onClick={(e) => {console.log('on click', e)}}
+            disabled
           >
             asdf movie
           </BxButton>
@@ -60,7 +61,7 @@ export default function Home() {
           <BxButton
             className="whitespace-nowrap"
             variant={"tertiary"}
-            size={'sm'}
+            size='sm'
             disabled={true}
           >
             small

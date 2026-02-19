@@ -10,15 +10,17 @@
   },
   "dependencies": {
     "@bexio/design-tokens": "0.11.0",
-    "@bexio/components": "0.11.0-alpha.12",
-    "@bexio/react-wrappers": "0.11.0-alpha.12",    
+    "@bexio/components": "0.11.0-alpha.13",
+    "@bexio/react-wrappers": "0.11.0-alpha.13",
     "lit": "3.1.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "next": "16.0.0",
     "@fortawesome/fontawesome-free": "^6.4.0",
     "@fortawesome/fontawesome-pro": "^6.4.0",
-    "@fortawesome/fontawesome-svg-core": "^6.2.1"
+    "@fortawesome/fontawesome-svg-core": "^6.2.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1"
   },
   "devDependencies": {
     "typescript": "^5.9.3",

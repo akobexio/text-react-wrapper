@@ -43,7 +43,7 @@ const InnerButton = (props: ButtonProps & {
       {...(rest.form ? { form: rest.form } : {})}
       {...rest}
     >
-   {rest.form} {props.children}
+    {props.children}
     </BxButton>
   );
 };
