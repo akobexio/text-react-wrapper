@@ -1,14 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Lato } from "next/font/google";
-import "./globals.css";
-
-
-
-const latoSans = Lato({
-  variable: "--font-lato-sans",
-  subsets: ["latin"],
-  weight: ["100", "300", "400", "700", "900"],
-});
+ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,12 +12,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="" >
-      <body
-        className={`${latoSans.variable} antialiased`}
-      >
-        {children}
-      </body>
+    <html lang="en" className="">
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=optional"
+          rel="stylesheet"
+        ></link>
+      </head>
+      <body>{children}</body>
     </html>
   );
 }
